@@ -24,3 +24,24 @@ code {
 .odd-index:hover {
   transform: translateY(0); /* Return to the original position when hovered */
 }
+
+.gradient-background {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+  
+  background-size: 800% 800%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

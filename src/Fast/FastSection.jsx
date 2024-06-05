@@ -9,6 +9,7 @@ function FastSection() {
   const maxScroll = 500; // Maximum scroll value to affect the width
   const [isFixed, setIsFixed] = useState(false);
   const [marginTop, setMarginTop] = useState(initialWidth / 20); // Initial marginTop
+  const scrollRef = useRef(null);
 
   const handleScroll = () => {
     if (divRef.current) {
@@ -41,6 +42,24 @@ function FastSection() {
     }
   };
 
+  const handleLeftClick = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: -300,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const handleRightClick = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: 300,
+        behavior: "smooth",
+      });
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -49,7 +68,7 @@ function FastSection() {
   }, []);
 
   return (
-    <div className="w-full flex justify-start h-fit items-center flex-col relative px-10  overflow-hidden">
+    <div className="w-full flex justify-start h-fit items-center flex-col relative px-10 overflow-hidden">
       <h1
         style={{
           transition: "top 0.3s ease", // Adding transition property
@@ -65,11 +84,11 @@ function FastSection() {
         </div>
         <div>things in online</div>
       </h1>
-      <div className="w-full h-screen flex justify-end flex-col p-10">
-        <div className="w-full h-full  flex gap-3 p-3">
-          <div className="flex-none bg-stone-600 bg-opacity-5 rounded-3xl " style={{ flexBasis: "80%" }}>
-            <div className="w-full h-full   flex justify-end flex-col relative">
-              <div className="text3xl w-full  font-bold absolute top-20 left-10 flex justify-start items-center gap-9">
+      <div className="w-full h-screen flex justify-end flex-col p-10" ref={scrollRef}>
+        <div className="w-full h-full flex gap-3 p-3">
+          <div className="flex-none bg-stone-600 bg-opacity-5 rounded-3xl" style={{ flexBasis: "80%" }}>
+            <div className="w-full h-full flex justify-end flex-col relative">
+              <div className="text3xl w-full font-bold absolute top-20 left-10 flex justify-start items-center gap-9">
                 <h1 className="text-[35px] font-bold leading-none">
                   Prioritise <br /> performance
                 </h1>
@@ -79,27 +98,24 @@ function FastSection() {
                     with features like Energy Saver and Memory Saver.
                   </p>
                   <a className="text-blue-400 bg-opacity-25 px-0 font-normal">
-                    lern more abot battery and memory
+                    learn more about battery and memory
                   </a>
                 </div>
               </div>
-              <motion.div className="flex justify-start gap-4 p-4 rounded-3xl w-fit  relative flex-col">
-                {/* <div style={{height:initialWidth}} className='' >hello</div> */}
+              <motion.div className="flex justify-start gap-4 p-4 rounded-3xl w-fit relative flex-col">
                 <motion.img
                   animate={controls}
-              
                   src="https://www.google.com/chrome/static/images/dev-components/chrome-gallery-3-2x.webp"
                   className="w-full h-full object-contain"
                   alt=""
                   ref={divRef}
                 />
-                {/* <img src="" className='w-auto h-full object-cover' alt="" /> */}
               </motion.div>
             </div>
           </div>
           <div className="flex-none" style={{ flexBasis: "80%" }}>
-            <div className="w-full h-full   flex justify-end flex-col relative">
-              <div className="text3xl w-full  font-bold absolute top-20 left-10 flex justify-start items-center gap-9">
+            <div className="w-full h-full flex justify-end flex-col relative">
+              <div className="text3xl w-full font-bold absolute top-20 left-10 flex justify-start items-center gap-9">
                 <h1 className="text-[35px] font-bold leading-none">
                   Prioritise <br /> performance
                 </h1>
@@ -109,12 +125,11 @@ function FastSection() {
                     with features like Energy Saver and Memory Saver.
                   </p>
                   <a className="text-blue-400 bg-opacity-25 px-0 font-normal">
-                    lern more abot battery and memory
+                    learn more about battery and memory
                   </a>
                 </div>
               </div>
               <motion.div className="flex justify-start gap-4 p-4 rounded-3xl w-fit border relative flex-col">
-                {/* <div style={{height:initialWidth}} className='' >hello</div> */}
                 <motion.img
                   animate={controls}
                   transition={{ duration: 0.3 }}
@@ -124,18 +139,16 @@ function FastSection() {
                   alt=""
                   ref={divRef}
                 />
-                {/* <img src="" className='w-auto h-full object-cover' alt="" /> */}
               </motion.div>
             </div>
           </div>
-        
         </div>
 
         <div className="w-full h-fit flex p-3 gap-4">
-          <button className="p-4 text-3xl bg-stone-100  hover:text-blue-400 font-bold transition-all duration-300 px-6 text-stone-600 rounded-full">
+          <button onClick={handleLeftClick} className="p-4 text-3xl bg-stone-100 hover:text-blue-400 font-bold transition-all duration-300 px-6 text-stone-600 rounded-full">
             {"<"}
           </button>
-          <button className="p-4 text-3xl bg-stone-100  hover:text-blue-400 font-bold transition-all duration-300 px-6 text-stone-600 rounded-full">
+          <button onClick={handleRightClick} className="p-4 text-3xl bg-stone-100 hover:text-blue-400 font-bold transition-all duration-300 px-6 text-stone-600 rounded-full">
             {">"}
           </button>
         </div>
