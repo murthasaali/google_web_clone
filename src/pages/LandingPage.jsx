@@ -32,7 +32,6 @@ function LandingPage() {
   return (
     <div className='w-full h-fit flex flex-col relative overflow-hidden'>
       <HomeLanding />
-      <UpdateSection />
       {/* <SafeSection /> */}
       {showNavBar && (
         <div className='w-full flex justify-center items-center fixed top-10 z-[1000]'>
@@ -41,6 +40,7 @@ function LandingPage() {
       )}
       <div id='fast-section'>
         <FastSection />
+      <UpdateSection />
       </div>
       {/* <YoursCarousal/> */}
       <YoursSection />
