@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
+import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
 
 function FastSection() {
   const controls = useAnimation();
@@ -9,7 +10,6 @@ function FastSection() {
   const maxScroll = 500; // Maximum scroll value to affect the width
   const [isFixed, setIsFixed] = useState(false);
   const [marginTop, setMarginTop] = useState(initialWidth / 20); // Initial marginTop
-  const scrollRef = useRef(null);
 
   const handleScroll = () => {
     if (divRef.current) {
@@ -41,22 +41,17 @@ function FastSection() {
       }
     }
   };
+  const scrollContainerRef = useRef(null);
 
-  const handleLeftClick = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: -300,
-        behavior: "smooth",
-      });
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -500, behavior: 'smooth' });
     }
   };
 
-  const handleRightClick = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: 300,
-        behavior: "smooth",
-      });
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 500, behavior: 'smooth' });
     }
   };
 
@@ -68,7 +63,7 @@ function FastSection() {
   }, []);
 
   return (
-    <div className="w-full flex justify-start h-fit items-center flex-col relative px-10 overflow-hidden">
+    <div className="w-full flex justify-start h-fit items-center flex-col relative px-10 ">
       <h1
         style={{
           transition: "top 0.3s ease", // Adding transition property
@@ -84,7 +79,7 @@ function FastSection() {
         </div>
         <div>things in online</div>
       </h1>
-      <div className="w-full h-screen flex justify-end flex-col p-10" ref={scrollRef}>
+      <div className="w-full h-screen flex justify-end overflow-x-auto flex-col p-10 scroll-container" ref={scrollContainerRef}>
         <div className="w-full h-full flex gap-3 p-3">
           <div className="flex-none bg-stone-600 bg-opacity-5 rounded-3xl" style={{ flexBasis: "80%" }}>
             <div className="w-full h-full flex justify-end flex-col relative">
@@ -129,7 +124,7 @@ function FastSection() {
                   </a>
                 </div>
               </div>
-              <motion.div className="flex justify-start gap-4 p-4 rounded-3xl w-fit border relative flex-col">
+              <motion.div className="flex justify-start gap-4 p-4 rounded-3xl w-fit  relative flex-col">
                 <motion.img
                   animate={controls}
                   transition={{ duration: 0.3 }}
@@ -144,14 +139,15 @@ function FastSection() {
           </div>
         </div>
 
-        <div className="w-full h-fit flex p-3 gap-4">
-          <button onClick={handleLeftClick} className="p-4 text-3xl bg-stone-100 hover:text-blue-400 font-bold transition-all duration-300 px-6 text-stone-600 rounded-full">
-            {"<"}
-          </button>
-          <button onClick={handleRightClick} className="p-4 text-3xl bg-stone-100 hover:text-blue-400 font-bold transition-all duration-300 px-6 text-stone-600 rounded-full">
-            {">"}
-          </button>
-        </div>
+        <div className='w-fit bottom-[-40px] gap-10 absolute  flex justify-between p-3'>
+        <button className='p-4 text-3xl   bg-stone-100 bg-opacity-10 shadow-md  text-black rounded-full' onClick={scrollLeft}>
+      <FaChevronLeft/>
+        </button>
+        <button className='p-4 text-3xl   bg-stone-100 bg-opacity-10 shadow-md text-black rounded-full' onClick={scrollRight}>
+      
+      <FaChevronRight/>
+        </button>
+      </div>
       </div>
     </div>
   );
