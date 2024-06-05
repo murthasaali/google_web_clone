@@ -6,9 +6,9 @@ import AnimatedButton from "../customComponents/MotionButton";
 function FastSection() {
   const controls = useAnimation();
   const divRef = useRef(null);
-  const initialWidth = 584; // Initial width in pixels (96 * 4 for tailwind w-96)
-  const minWidth = 200; // Minimum width of the div
-  const maxScroll = 600; // Maximum scroll value to affect the width
+  const initialWidth = 684; // Initial width in pixels (96 * 4 for tailwind w-96)
+  const minWidth = 400; // Minimum width of the div
+  const maxScroll = 200; // Maximum scroll value to affect the width
   const [isFixed, setIsFixed] = useState(false);
   const [marginTop, setMarginTop] = useState(initialWidth / 20); // Initial marginTop
 
@@ -101,7 +101,8 @@ function FastSection() {
                 animate={controls}
                  className="flex justify-start gap-4 p-4 pb-10  rounded-3xl w-fit relative flex-col">
                 <video
-                 
+                 autoPlay
+                 loop
                   src="https://www.google.com/chrome/static/videos/dev-components/non-chrome.webm"
                   className="w-[130%] h-auto object-contain"
                   alt=""
