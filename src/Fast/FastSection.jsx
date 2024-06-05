@@ -80,7 +80,7 @@ function FastSection() {
       </h1>
       <div className="w-full h-screen flex justify-end overflow-x-auto flex-col p-10 scroll-container" ref={scrollContainerRef}>
         <div className="w-full h-full flex gap-3 p-3">
-          <div className="flex-none bg-stone-600 bg-opacity-5 rounded-3xl" style={{ flexBasis: "80%" }}>
+          <div className="flex-none bg-stone-600 bg-opacity-5 rounded-3xl" style={{ flexBasis: "90%" }}>
             <div className="w-full h-full flex justify-end flex-col relative">
               <div className="text3xl w-full font-bold absolute top-20 left-10 flex justify-start items-center gap-9">
                 <h1 className="text-[35px] font-bold leading-none">
@@ -96,22 +96,25 @@ function FastSection() {
                   </a>
                 </div>
               </div>
-              <motion.div className="flex justify-start gap-4 p-4 rounded-3xl w-fit relative flex-col">
-                <motion.img
-                  animate={controls}
-                  src="https://www.google.com/chrome/static/images/dev-components/chrome-gallery-3-2x.webp"
-                  className="w-full h-full object-contain"
+              <motion.div
+                ref={divRef}
+                animate={controls}
+                 className="flex justify-start gap-4 p-4 pb-10  rounded-3xl w-fit relative flex-col">
+                <video
+                 
+                  src="https://www.google.com/chrome/static/videos/dev-components/non-chrome.webm"
+                  className="w-[130%] h-auto object-contain"
                   alt=""
-                  ref={divRef}
+                
                 />
               </motion.div>
             </div>
           </div>
-          <div className="flex-none bg-stone-300 rounded-3xl bg-opacity-15" style={{ flexBasis: "80%" }}>
+          <div className="flex-none bg-yellow-400 rounded-3xl bg-opacity-15" style={{ flexBasis: "90%" }}>
             <div className="w-full h-full flex justify-end flex-col relative">
               <div className="text3xl w-full font-bold absolute top-20 left-10 flex justify-start items-center gap-9">
                 <h1 className="text-[35px] font-bold leading-none">
-                  Prioritise <br /> performance
+                Stay on top <br /> of tabs
                 </h1>
                 <div className="flex flex-col gap-5 w-[300px]">
                   <p className="font-thin">
@@ -123,7 +126,7 @@ function FastSection() {
                   </a>
                 </div>
               </div>
-              <motion.div className="flex justify-start gap-4 p-4 rounded-3xl w-fit  relative flex-col">
+              <motion.div className="flex justify-start gap-4 p-4 pb-10 rounded-3xl w-fit  relative flex-col">
                 <motion.img
                   animate={controls}
                   transition={{ duration: 0.3 }}
@@ -136,7 +139,7 @@ function FastSection() {
               </motion.div>
             </div>
           </div>
-          <div className="flex-none bg-stone-300 rounded-3xl bg-opacity-15" style={{ flexBasis: "80%" }}>
+          <div className="flex-none bg-stone-300 rounded-3xl bg-opacity-15" style={{ flexBasis: "90%" }}>
             <div className="w-full h-full flex justify-end flex-col relative">
               <div className="text3xl w-full font-bold absolute top-20 left-10 flex justify-start items-center gap-9">
                 <h1 className="text-[35px] font-bold leading-none">
@@ -152,7 +155,7 @@ function FastSection() {
                   </a>
                 </div>
               </div>
-              <motion.div className="flex justify-start gap-4 p-4 rounded-3xl w-fit  relative flex-col">
+              <motion.div className="flex justify-start gap-4 p-4 pb-10 rounded-3xl w-fit  relative flex-col">
                 <motion.img
                   animate={controls}
                   transition={{ duration: 0.3 }}
