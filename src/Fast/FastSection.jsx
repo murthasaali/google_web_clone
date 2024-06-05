@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
+import AnimatedButton from "../customComponents/MotionButton";
 
 function FastSection() {
   const controls = useAnimation();
@@ -63,7 +64,7 @@ function FastSection() {
   }, []);
 
   return (
-    <div className="w-full flex justify-start h-fit items-center flex-col relative px-10 ">
+    <div className="w-full flex justify-start h-fit items-center flex-col relative px-10 pb-10  ">
       <h1
         style={{
           transition: "top 0.3s ease", // Adding transition property
@@ -72,9 +73,7 @@ function FastSection() {
       >
         <div className="flex justify-center items-center gap-3 w-full px">
           the
-          <button className="px-4 rounded-full text-green-500 text-opacity-70 font-semibold flex justify-center items-center text-center">
-            Fast
-          </button>
+          <AnimatedButton/>
           Way to do
         </div>
         <div>things in online</div>
@@ -139,7 +138,7 @@ function FastSection() {
           </div>
         </div>
 
-        <div className='w-fit bottom-[-40px] gap-10 absolute  flex justify-between p-3'>
+        <div className='w-fit bottom-[-5px] gap-10 absolute z-20  flex justify-between p-3'>
         <button className='p-4 text-3xl   bg-stone-100 bg-opacity-10 shadow-md  text-black rounded-full' onClick={scrollLeft}>
       <FaChevronLeft/>
         </button>

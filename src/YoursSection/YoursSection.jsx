@@ -50,12 +50,12 @@ function YoursSection() {
             src="https://www.google.com/chrome/static/images/v2/yours-take-over/theme-arches-2x.webp"
             alt=""
             className="w-[40%] mt-96 rounded-3xl"
-            style={{ transform: `scale(${scaleImage*1.6})` }}
+            style={{ transform: `scale(${scaleImage/.8})` }}
           />
         </div>
       </div>
-      <div className='w-full h-screen  flex justify-center items-center mt-96'>
-      <div className='w-[80%] h-[80%]  overflow-y-auto relative'>
+      <div className='w-full h-[800px]  flex justify-center items-center mt-96 '>
+      <div className='w-[80%] h-[80%]  overflow-y-auto relative scroll-container'>
   <div className='sticky top-0 left-0 w-full h-full z-10' style={{backgroundImage:'url("https://www.google.com/chrome/static/images/v2/yours-take-over/theme-ui-1-2x.webp")',backgroundSize:"cover",}}> {/* Adjust z-index if needed */}
   </div>
   <div className='absolute top-full left-0 w-full h-full z-50' style={{backgroundImage:'url("https://www.google.com/chrome/static/images/v2/yours-take-over/theme-ui-2-2x.webp")',backgroundSize:"cover",}}> {/* Adjust z-index if needed */}
@@ -64,7 +64,7 @@ function YoursSection() {
 
     </div>
   <YoursCarousal/>
-  <ExtentSection/>
+  {/* <ExtentSection/> */}
     </>
   );
 }

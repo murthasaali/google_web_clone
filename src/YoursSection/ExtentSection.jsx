@@ -32,7 +32,7 @@ function ExtentSection() {
   }, []);
 
   return (
-    <div className='w-full h-screen  flex  p-20  gap-10 relative '>
+    <div className='w-full h-screen  flex  p-20  gap-10 relative overflow-x-hidden'>
       <div className='  right-10 absolute bottom-20 z-40' style={{ height: scrollHeight, width: scrollWidth }}>
         <img src="https://www.google.com/chrome/static/images/dev-components/extensions-icon-2x.png" className="absolute shadow-lg backdrop-blur rounded-full h-28 top-2 left-2" alt="" style={{ opacity: opacity+0.4, transition: 'opacity 0.5s' }} />
         <img src='https://www.google.com/chrome/static/images/dev-components/extensions-shop-2x.png' className="absolute shadow-lg backdrop-blur rounded-full h-28 top-2 right-2" alt="" style={{ opacity: opacity, transition: 'opacity 0.5s' }} />

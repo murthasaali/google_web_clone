@@ -6,6 +6,7 @@ import YoursSection from '../YoursSection/YoursSection';
 import SafeSection from '../Safe/SafeSection';
 import FastSection from '../Fast/FastSection';
 import HomeNavBar from '../Home/HomeNavBar';
+import ExtentSection from '../YoursSection/ExtentSection';
 
 function LandingPage() {
   const [showNavBar, setShowNavBar] = useState(false);
@@ -29,7 +30,7 @@ function LandingPage() {
   }, []);
 
   return (
-    <div className='w-full h-fit flex flex-col relative'>
+    <div className='w-full h-fit flex flex-col relative overflow-hidden'>
       <HomeLanding />
       {/* <UpdateSection /> */}
       {/* <SafeSection /> */}
@@ -41,7 +42,9 @@ function LandingPage() {
       <div id='fast-section'>
         <FastSection />
       </div>
+      {/* <YoursCarousal/> */}
       <YoursSection />
+  <ExtentSection/>
       {/* <HomeLanding /> */}
       {/* <YoursSection /> */}
     </div>
