@@ -10,11 +10,11 @@ import FastSection from '../Fast/FastSection'
     return (
         <div className='w-full h-fit flex flex-col'>
             <HomeLanding/>
-            <UpdateSection/>
-            <YoursSection/>
-            <SafeSection/>
+            {/* <UpdateSection/> */}
+            {/* <YoursSection/> */}
+            {/* <SafeSection/> */}
             <FastSection/>
-            <HomeLanding/>
+            {/* <HomeLanding/> */}
             {/* <YoursSection/> */}
         </div>
     )
