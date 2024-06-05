@@ -107,7 +107,7 @@ function FastSection() {
               </motion.div>
             </div>
           </div>
-          <div className="flex-none" style={{ flexBasis: "80%" }}>
+          <div className="flex-none bg-stone-300 rounded-3xl bg-opacity-15" style={{ flexBasis: "80%" }}>
             <div className="w-full h-full flex justify-end flex-col relative">
               <div className="text3xl w-full font-bold absolute top-20 left-10 flex justify-start items-center gap-9">
                 <h1 className="text-[35px] font-bold leading-none">
@@ -129,6 +129,35 @@ function FastSection() {
                   transition={{ duration: 0.3 }}
                   autoPlay
                   src="https://www.google.com/chrome/static/images/dev-components/chrome-gallery-5-2x.webp"
+                  className="w-full h-full object-contain"
+                  alt=""
+                  ref={divRef}
+                />
+              </motion.div>
+            </div>
+          </div>
+          <div className="flex-none bg-stone-300 rounded-3xl bg-opacity-15" style={{ flexBasis: "80%" }}>
+            <div className="w-full h-full flex justify-end flex-col relative">
+              <div className="text3xl w-full font-bold absolute top-20 left-10 flex justify-start items-center gap-9">
+                <h1 className="text-[35px] font-bold leading-none">
+                  Prioritise <br /> performance
+                </h1>
+                <div className="flex flex-col gap-5 w-[300px]">
+                  <p className="font-thin">
+                    Chrome is built for performance. Optimise your experience
+                    with features like Energy Saver and Memory Saver.
+                  </p>
+                  <a className="text-blue-400 bg-opacity-25 px-0 font-normal">
+                    learn more about battery and memory
+                  </a>
+                </div>
+              </div>
+              <motion.div className="flex justify-start gap-4 p-4 rounded-3xl w-fit  relative flex-col">
+                <motion.img
+                  animate={controls}
+                  transition={{ duration: 0.3 }}
+                  autoPlay
+                  src="https://www.google.com/chrome/static/images/homepage/fast/devices_desktop-2x.webp"
                   className="w-full h-full object-contain"
                   alt=""
                   ref={divRef}
