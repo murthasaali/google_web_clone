@@ -6,9 +6,9 @@ import AnimatedButton from "../customComponents/MotionButton";
 function FastSection() {
   const controls = useAnimation();
   const divRef = useRef(null);
-  const initialWidth = 484; // Initial width in pixels (96 * 4 for tailwind w-96)
+  const initialWidth = 584; // Initial width in pixels (96 * 4 for tailwind w-96)
   const minWidth = 200; // Minimum width of the div
-  const maxScroll = 500; // Maximum scroll value to affect the width
+  const maxScroll = 600; // Maximum scroll value to affect the width
   const [isFixed, setIsFixed] = useState(false);
   const [marginTop, setMarginTop] = useState(initialWidth / 20); // Initial marginTop
 
