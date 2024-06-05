@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import HomeNavBar from './HomeNavBar';
 import HomeCarousal from './HomeCarousal';
+import TypeWriterEffect from 'react-typewriter-effect';
 
 function HomeLanding() {
   const carouselRef = useRef(null);
@@ -25,9 +26,9 @@ function HomeLanding() {
     <>
       <div className='w-full h-fit flex justify-center items-center flex-col p-10 gap-5'>
         <img src="https://www.google.com/chrome/static/images/chrome-logo-m100.svg" alt="" className='h-20 w-auto' />
-        <h1 className='md:text-[95px] text-[50px] text-gray-800 leading-none text-center font-bold w-[80%] md:w-[60%]'>
+        <h1 className='md:text-[95px] text-[50px] text-gray-800 leading-none text-center font-bold w-[80%] md:w-[70%]'>
           The browser <br />
-          built to be yours
+  built to be Yours
         </h1>
         <HomeNavBar />
         <h2 className='text-2xl font-thin'>Need the Chrome installer? <span className='text-blue-600'>Download here</span></h2>
