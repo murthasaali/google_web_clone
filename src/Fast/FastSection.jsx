@@ -26,8 +26,8 @@ function FastSection() {
 
         // Calculate and set the new marginTop
         const newMarginTop =
-          initialWidth / 20 -
-          ((initialWidth / 20) * (scrollY - elementTop)) / maxScroll;
+          initialWidth / 10 -
+          ((initialWidth / 10) * (scrollY - elementTop)) / maxScroll;
         setMarginTop(Math.max(newMarginTop, 0)); // Ensure marginTop doesn't go below 0
 
         setIsFixed(newWidth <= 400); // Set isFixed based on the width condition
