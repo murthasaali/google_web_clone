@@ -1,10 +1,10 @@
 import React from 'react'
-import UpdateCard from '../customComponents/UpdateCard'
+import UpdateCard from '../components/customComponents/UpdateCard'
 
 function UpdateSection() {
   return (
     <div className='w-full  flex justify-center items-center flex-col p-10 gap-5   h-fit  '>
-<h1 className='md:text-[80px] text-[50px] text-gray-800 text-opacity-90 leading-tight text-center font-bold w-[80%] md:w-[80%] mx-auto'>
+<h1 className='md:text-[80px] text-[50px] text-gray-100 text-opacity-90 leading-tight text-center font-bold w-[80%] md:w-[80%] mx-auto'>
  <div>Discover the latest</div>
  <div className='flex justify-center items-center gap-3 w-full'>
     <button className='   px-4  rounded-full text-blue-500 text-opacity-70 flex justify-center items-center text-center '>updates{" "} </button>

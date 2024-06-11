@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
-import AnimatedButton from "../customComponents/MotionButton";
+import AnimatedButton from "../components/customComponents/MotionButton";
 
 function FastSection() {
   const controls = useAnimation();
@@ -64,12 +64,12 @@ function FastSection() {
   }, []);
 
   return (
-    <div className="w-full flex justify-start h-fit items-center flex-col relative px-10 pb-10  ">
+    <div className="w-full flex justify-start h-fit items-center text-stone-400  flex-col relative px-10 pb-10  ">
       <h1
         style={{
           transition: "top 0.3s ease", // Adding transition property
         }}
-        className={`md:text-[60px] h-fit text-[50px] text-gray-800 my-10 text-opacity-90 leading-tight bg-white text-center font-bold w-[80%] md:w-[80%] mx-auto`}
+        className={`md:text-[60px] h-fit text-[50px] text-gray-100 my-10 text-opacity-70 leading-tight  text-center font-bold w-[80%] md:w-[80%] mx-auto`}
       >
         <div className="flex justify-center items-center gap-3 w-full px">
           the
@@ -78,10 +78,10 @@ function FastSection() {
         </div>
         <div>things in online</div>
       </h1>
-      <div className="w-full h-screen flex justify-end overflow-x-auto flex-col p-10 scroll-container" ref={scrollContainerRef}>
+      <div className="w-full h-[700px] flex justify-end overflow-x-auto flex-col p-10 scroll-container" ref={scrollContainerRef}>
         <div className="w-full h-full flex gap-3 p-3">
-          <div className="flex-none bg-stone-600 bg-opacity-5 rounded-3xl" style={{ flexBasis: "90%" }}>
-            <div className="w-full h-full flex justify-end flex-col relative">
+          <div className="flex-none overflow-hidden bg-stone-100 bg-opacity-10 rounded-3xl" style={{ flexBasis: "70%" }}>
+            <div className="w-full h-full flex justify-end  flex-col relative">
               <div className="text3xl w-full font-bold absolute top-20 left-10 flex justify-start items-center gap-9">
                 <h1 className="text-[35px] font-bold leading-none">
                   Prioritise <br /> performance
@@ -99,19 +99,21 @@ function FastSection() {
               <motion.div
                 ref={divRef}
                 animate={controls}
+                transition={{ duration: 0.7 }}
+
                  className="flex justify-start gap-4 p-4 pb-10  rounded-3xl w-fit relative flex-col">
                 <video
                  autoPlay
                  loop
                   src="https://www.google.com/chrome/static/videos/dev-components/non-chrome.webm"
-                  className="w-[130%] h-auto object-contain"
+                  className="w-[130%] h-auto object-contain rounded-3xl"
                   alt=""
                 
                 />
               </motion.div>
             </div>
           </div>
-          <div className="flex-none bg-yellow-400 rounded-3xl bg-opacity-15" style={{ flexBasis: "90%" }}>
+          <div className="flex-none overflow-hidden bg-stone-100 rounded-3xl bg-opacity-15" style={{ flexBasis: "70%" }}>
             <div className="w-full h-full flex justify-end flex-col relative">
               <div className="text3xl w-full font-bold absolute top-20 left-10 flex justify-start items-center gap-9">
                 <h1 className="text-[35px] font-bold leading-none">
@@ -127,10 +129,10 @@ function FastSection() {
                   </a>
                 </div>
               </div>
-              <motion.div className="flex justify-start gap-4 p-4 pb-10 rounded-3xl w-fit  relative flex-col">
+              <motion.div className="flex justify-end gap-4 p-4 pb-10 rounded-3xl w-fit  relative flex-col">
                 <motion.img
                   animate={controls}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.7 }}
                   autoPlay
                   src="https://www.google.com/chrome/static/images/dev-components/chrome-gallery-5-2x.webp"
                   className="w-full h-full object-contain"
@@ -140,7 +142,7 @@ function FastSection() {
               </motion.div>
             </div>
           </div>
-          <div className="flex-none bg-stone-300 rounded-3xl bg-opacity-15" style={{ flexBasis: "90%" }}>
+          <div className="flex-none overflow-hidden bg-stone-300 rounded-3xl bg-opacity-15" style={{ flexBasis: "70%" }}>
             <div className="w-full h-full flex justify-end flex-col relative">
               <div className="text3xl w-full font-bold absolute top-20 left-10 flex justify-start items-center gap-9">
                 <h1 className="text-[35px] font-bold leading-none">
@@ -159,7 +161,7 @@ function FastSection() {
               <motion.div className="flex justify-start gap-4 p-4 pb-10 rounded-3xl w-fit  relative flex-col">
                 <motion.img
                   animate={controls}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.7 }}
                   autoPlay
                   src="https://www.google.com/chrome/static/images/homepage/fast/devices_desktop-2x.webp"
                   className="w-full h-full object-contain"
@@ -172,10 +174,10 @@ function FastSection() {
         </div>
 
         <div className='w-fit bottom-[-5px] gap-10 absolute z-20  flex justify-between p-3'>
-        <button className='p-4 text-3xl   bg-stone-100 bg-opacity-10 shadow-md  text-black rounded-full' onClick={scrollLeft}>
+        <button className='p-4 text-3xl   bg-stone-50 bg-opacity-40 shadow-md  text-black rounded-full' onClick={scrollLeft}>
       <FaChevronLeft/>
         </button>
-        <button className='p-4 text-3xl   bg-stone-100 bg-opacity-10 shadow-md text-black rounded-full' onClick={scrollRight}>
+        <button className='p-4 text-3xl   bg-stone-50 bg-opacity-40 shadow-md text-black rounded-full' onClick={scrollRight}>
       
       <FaChevronRight/>
         </button>

@@ -53,3 +53,8 @@ code {
   -ms-overflow-style: none; 
   scrollbar-width: none;
 }
+.grid-container {
+  width: 100%; 
+  display: grid; 
+  grid-template-columns: repeat(12, minmax(0, 1fr)); /* Sets grid columns to 12 */
+}

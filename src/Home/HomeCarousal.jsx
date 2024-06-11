@@ -15,7 +15,7 @@ function HomeCarousal() {
                     key={index} 
                     src={item} 
                     alt="" 
-                    className={`h-auto w-auto shadow-md rounded-xl border ${index % 2 !== 0 ? 'odd-index' : ''}`} 
+                    className={`h-auto w-auto shadow-md rounded-xl  opacity-90 ${index % 2 !== 0 ? 'odd-index' : ''}`} 
                 />
             ))}
         </div>

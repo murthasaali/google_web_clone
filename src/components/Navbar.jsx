@@ -2,10 +2,10 @@ import React from 'react'
 
 function Navbar() {
   return (
-    <div className='w-full h-20 bg-white p-3 flex shadow-sm justify-start gap-5 items-center text-stone-900 text-opacity-70 font-medium'>
+    <div className='w-full h-20 bg-stone-50 text-stone-300 bg-opacity-5 p-3 flex shadow-sm justify-start gap-5 items-center  text-opacity-70 font-medium'>
         <button className='h-fit w-fit px-4  py-2 flex justify-center items-center gap-2 rounded-xl hover:bg-opacity-10  hover:bg-gray-700'>
             <img src="https://www.google.com/chrome/static/images/chrome-logo-m100.svg" className='h-10 w-auto' />
-            <div className='text-2xl font-medium text-stone-900 text-opacity-70 '>Chrome</div>
+            <div className='text-2xl font-medium text-stone-100  '>Chrome</div>
         </button>
         <div className='w-fit h-full  p-5 flex justify-center items-center gap-5 '>
             <button   >home</button>

@@ -2,7 +2,7 @@ import React from 'react'
 
 function YoursCarousal() {
   return (
-    <div className='w-full h-screen  flex  p-20  gap-10 '>
+    <div className='w-full h-screen  flex  p-20 text-stone-100  gap-10 '>
         <div className='w-1/2 h-full  rounded-3xl bg-stone-600 ' >
             <img src="https://www.google.com/chrome/static/images/v2/accordion-timed/autofill-2x.webp" className='rounded-3xl h-full w-full' alt="" />
         </div>

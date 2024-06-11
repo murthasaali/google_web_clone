@@ -32,7 +32,7 @@ function ExtentSection() {
   }, []);
 
   return (
-    <div className='w-full h-screen  flex  p-20  gap-10 relative overflow-x-hidden'>
+    <div className='w-full h-screen text-stone-100  flex  p-20  gap-10 relative overflow-x-hidden'>
       <div className='  right-10 absolute bottom-20 z-40' style={{ height: scrollHeight, width: scrollWidth }}>
         <img src="https://www.google.com/chrome/static/images/dev-components/extensions-icon-2x.png" className="absolute shadow-lg backdrop-blur rounded-full h-28 top-2 left-2" alt="" style={{ opacity: opacity+0.4, transition: 'opacity 0.5s' }} />
         <img src='https://www.google.com/chrome/static/images/dev-components/extensions-shop-2x.png' className="absolute shadow-lg backdrop-blur rounded-full h-28 top-2 right-2" alt="" style={{ opacity: opacity, transition: 'opacity 0.5s' }} />
@@ -42,8 +42,8 @@ function ExtentSection() {
       </div>
       <div className='w-[40%] h-full  rounded-3xl flex flex-col items-start justify-center gap-5 ' >
         <h1 className='w-[70%] font-bold text-[55px] leading-none'>Extend your experience</h1>
-        <p className='text-2xl w-[100%] text-start font-normal text-stone-700'>Personalise your web browser with themes, dark mode and other options built just for you.</p>
-        <button className='px-6 py-2 bg-blue-100 rounded-full text-xl font-semibold text-blue-400'>Explore your extentions</button>
+        <p className='text-2xl w-[100%] text-start font-normal text-stone-600'>Personalise your web browser with themes, dark mode and other options built just for you.</p>
+        <button className='px-6 py-2 bg-stone-100 bg-opacity-10 rounded-full text-xl font-thin text-blue-400'>Explore your extentions</button>
       </div>
       <div className="w-[80%] h-full rounded-3xl flex flex-col justify-between p-10 relative">
         <img src="https://www.google.com/chrome/static/images/dev-components/extensions-ui-2x.png" className="w-full h-full" alt="" />
